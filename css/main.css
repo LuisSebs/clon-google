@@ -1,10 +1,6 @@
 /* Seminario de Desarrollo Web Frontend (2024-2) */
 /* NO MODIFICAR ↓↓↓ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-:root {
-    --background: #e0e5ec;
-    --gray: #797d7f
-}
 
 body {
     margin: 0;
@@ -14,12 +10,15 @@ body {
     background: rgb(238,174,202);
     background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 98%);
     overflow: hidden;
+    animation: colorama 2s infinite;
+    box-sizing: border-box;
     /*
     background-image: url("../imgs/guillaume.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;*/
 }
+
 /*
 @keyframes gradient {
     0% {
@@ -43,12 +42,6 @@ header {
     width: 100%;
     height: 60px;
     margin-bottom: 100px;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 header nav {
@@ -240,15 +233,14 @@ nav .right-nav a:hover,
 .voice{
     height: 20px;
     position: relative;
-    margin-bottom: -3px;
+    margin-bottom: -4px;
     margin-left: 20px;
     margin-right: 2px;
-    animation: animacion none 2s infinite alternate ease-in-out;
 }
 
 @keyframes animacion {
     0%{bottom: 0px;}
-    50%{bottom: 3px; }
+    50%{bottom: 10px; }
     100%{bottom: 0px; }
 }
 
@@ -257,7 +249,6 @@ nav .right-nav a:hover,
     position: relative;
     margin-bottom: -3px;
     margin-left: 10px;
-    animation: animacion none 2s infinite alternate ease-in-out;
 }
 
 
@@ -267,6 +258,7 @@ nav .right-nav a:hover,
     margin-bottom: -3px;
     margin-left: 10px;
     cursor: pointer;
+    animation: animacion none 2s infinite alternate ease-in-out;
 }
 
 center {
