@@ -1,11 +1,38 @@
 /* Seminario de Desarrollo Web Frontend (2024-2) */
 /* NO MODIFICAR ↓↓↓ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+:root {
+    --background: #e0e5ec;
+    --gray: #797d7f
+}
+
 body {
     margin: 0;
     padding: 0;
     font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 98%);
+    overflow: hidden;
+    /*
+    background-image: url("../imgs/guillaume.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;*/
 }
+/*
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+*/
 
 #foto-perfil{
     border-radius: 80%;
@@ -15,6 +42,13 @@ body {
 header {
     width: 100%;
     height: 60px;
+    margin-bottom: 100px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 header nav {
@@ -62,9 +96,12 @@ nav .nav-right-section .grid {
 }
 
 nav .nav-right-section .grid:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 0 0 6px #f0f0f0;
-    border-radius: 22px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
     transition: 0s ease;
 }
 
@@ -85,15 +122,19 @@ nav .nav-right-section .grid:hover {
     padding-left: 2px;
     border-radius: 30px;
     border: 1px solid #dfe1e5; 
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .bar:hover {
     box-shadow: 1px 1px 8px 1px #f0f0f0;
-    border-radius: 30px;
 }
 
 .bar:focus-within {
-    border-radius: 30px;
     box-shadow: 1px 1px 8px 1px #f0f0f0;
     outline: none;
 }
@@ -107,6 +148,7 @@ nav .nav-right-section .grid:hover {
     font-size: 16px;
     outline: none;
     padding-top: 8px;
+    background-color: rgba(255, 255, 255, 0.0);
 }
 
 center {
@@ -119,10 +161,11 @@ center {
     display: block;
     text-align: center;
     margin-top: 12px;
+    color: #303030;
 }
 
 .msg a {
-    color: #1e68a5;
+    color: blueviolet;
 }
 
 .msg a:hover {
@@ -132,7 +175,6 @@ center {
 /* PIE DE PÁGINA*/
 footer {
     background-color: #f2f2f2;
-    color: #70757a;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -148,6 +190,7 @@ footer {
     padding: 15px 30px;
     font-size: 15px;
     border-bottom: 1px solid #dadce0;
+    color: #70757a;
 }
 
 footer nav {
@@ -185,7 +228,7 @@ footer nav .left-nav, .right-nav{
 nav .right-nav a,
 .left-nav a {
     display: block;
-    color: #70757a;
+    color: #303030;
     margin-right: 15px;
 }
 
@@ -200,6 +243,13 @@ nav .right-nav a:hover,
     margin-bottom: -3px;
     margin-left: 20px;
     margin-right: 2px;
+    animation: animacion none 2s infinite alternate ease-in-out;
+}
+
+@keyframes animacion {
+    0%{bottom: 0px;}
+    50%{bottom: 3px; }
+    100%{bottom: 0px; }
 }
 
 .bi-camera{
@@ -207,27 +257,54 @@ nav .right-nav a:hover,
     position: relative;
     margin-bottom: -3px;
     margin-left: 10px;
+    animation: animacion none 2s infinite alternate ease-in-out;
 }
+
 
 .len{
     height: 20px;
     position: relative;
     margin-bottom: -3px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 center {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
+
 center input {
-    background-color: #f8f9fa;
-    border: none;
+    color: #303030;
+    font-weight: 500;
+    background-color: #fff;
     padding: 12px 16px;
-    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0px;
+    border-radius: 40px;
+    font-weight: 200;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 center input:hover {
-    border: 2px solid rgba(134, 126, 130, 0.103);
-    border-radius: 4px;
+    box-shadow: 1px 1px 8px 1px #f0f0f0;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.25) ;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18)
 }
